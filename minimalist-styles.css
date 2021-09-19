@@ -6,12 +6,123 @@
 }
 
 :root {
-    --fb-blue: rgb(56, 81, 133);
-    
+    --blue-white: rgba(255, 255, 255, .7);
+    --blue-light: rgba(199, 227, 242, 1); /* #C7E3F2 */
+    --blue-medium: rgba(66, 153, 255, 1); /* #4299FF */
+    --blue-dark: rgba(50, 136, 237, 1); /* #3288ED */
+    --blue-darker: rgba(39, 125, 227, 1); /* #277DE3 */
+    --gray-light: rgba(0, 0, 0, 0.52); /*  */
+    --gray-dark: rgba(56, 56, 56, 1); /* #383838 */
 }
 
 /* ---------- HTML, BODY ELEMENTS ---------- */
 html, body {
     height: 100vh;
+    width: 100%;
+}
+
+body {
+    background-color: var(--blue-light);
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    min-width: 320px;
+    
+
+    /* min-height: 1025px; */
+    /* font-weight: 400; */
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 1em;
+    width: 100%;
+    
+}
+
+section {
+    align-items: center;
+    color: var(--blue-white);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+section > * {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2em;
+
+}
+
+h2 {
+    color: var(--gray-light);
+    font-size: 1.25em;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.5em;
+}
+
+a, a::before, a::after {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+a:hover {
+  color: rgb(50, 231, 237);
+  transition: color 0.25s ease;  
+}
+
+.section-wrapper {
+    padding: 3em 2em;
+}
+
+/* ---------- TITLE CTR DECLERATIONS ---------- */
+#title-ctr {
+    background-color: var(--blue-white);
+    color: black;
+    padding: 2.5em;
+    width: 100%;
+    position: relative;
+}
+
+#title-ctr > * {
+    padding: .25em;
+    white-space: nowrap;
+}
+
+#title-ctr img {
+    border-radius: 100%;
+    width: 8em;
+}
+
+/* ---------- ABOUT CTR DECLERATIONS ---------- */
+#about-ctr {
+    background-color: var(--blue-medium);
+    width: 100%;
+}
+
+/* ---------- WORK CTR DECLERATIONS ---------- */
+#work-ctr {
+    background-color: var(--blue-dark);
+    width: 100%;
+}
+
+/* ---------- CONTACT CTR DECLERATIONS ---------- */
+#contact-ctr {
+    background-color: var(--blue-darker);
     width: 100%;
 }
