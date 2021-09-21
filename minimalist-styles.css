@@ -16,6 +16,10 @@
 }
 
 /* ---------- HTML, BODY ELEMENTS ---------- */
+html > svg {
+    display: none;
+}
+
 html, body {
     height: 100vh;
     width: 100%;
@@ -27,9 +31,10 @@ body {
     font-size: 18px;
     letter-spacing: -.5px;
     line-height: 1.25;
+    margin: 0 auto;
     min-width: 320px;
     
-
+    max-width: 325px;
     /* min-height: 1025px; */
     /* font-weight: 400; */
 }
@@ -47,12 +52,9 @@ main {
 }
 
 section {
-    /* align-items: center; */
     color: var(--blue-white);
     display: flex;
     flex-direction: column;
-    /* flex-grow: 1;
-    flex-shrink: 1; */
 }
 
 section > * {
@@ -103,6 +105,10 @@ hr {
     font-size: .815em;
 }
 
+.hidden-svg {
+    display: none;
+}
+
 /* ---------- TITLE CTR DECLERATIONS ---------- */
 #title-ctr {
     align-items: center;
@@ -149,15 +155,15 @@ hr {
 #work-ctr li::before {
     content: '';
     background-image: url(data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20d%3D%22M37.9%2C10.6l-3.2-3.2c-0.4-0.4-1-0.7-1.6-0.7c-0.6%2C0-1.2%2C0.2-1.6%2C0.7L15.9%2C23l-7-7c-0.4-0.4-1-0.7-1.6-0.7S6.1%2C15.6%2C5.6%2C16%20l-3.2%2C3.2c-0.4%2C0.4-0.7%2C1-0.7%2C1.6S2%2C22%2C2.4%2C22.5l8.6%2C8.6l3.2%2C3.2c0.4%2C0.4%2C1%2C0.7%2C1.6%2C0.7c0.6%2C0%2C1.2-0.2%2C1.6-0.7l3.2-3.2l17.2-17.2%20c0.4-0.4%2C0.7-1%2C0.7-1.6C38.6%2C11.6%2C38.4%2C11.1%2C37.9%2C10.6z%22%20fill%3D%22%23FFFFFF%22%20%2F%3E%3C%2Fsvg%3E);
-    display: inline-block;
-    width: 1.25em;
-    height: 1.25em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
     border: 1px solid rgba(255, 255, 255, .2);;
     border-radius: 100%;
-    background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: inline-block;
+    height: 1.25em;
     margin-right: .85em;
+    width: 1.25em;
 }
 
 #work-ctr hr {
@@ -178,7 +184,6 @@ hr {
 
 #contact-ctr a {
     text-decoration: none;
-    /* font-weight: 100; */
 }
 
 #contact-link-wrap {
@@ -188,24 +193,20 @@ hr {
 }
 
 #contact-link-wrap .contact-link {
-    /* align-items: center; */
     border: 1px solid rgba(255, 255, 255, .2);
     border-radius: .25em;
     display: flex;
-    /* justify-content: center; */
     margin-bottom: .25em;
     margin-right: .25em;
     padding: .5em 1em;
 }
 
-#twitter-icon {
-    /* offset-path: path("M 36.3 10.2 c -1 1.3 -2.1 2.5 -3.4 3.5 c 0 0.2 0 0.4 0 1 c 0 1.7 -0.2 3.6 -0.9 5.3 c -0.6 1.7 -1.2 3.5 -2.4 5.1 c -1.1 1.5 -2.3 3.1 -3.7 4.3 c -1.4 1.2 -3.3 2.3 -5.3 3 c -2.1 0.8 -4.2 1.2 -6.6 1.2 c -3.6 0 -7 -1 -10.2 -3 c 0.4 0 1.1 0.1 1.5 0.1 c 3.1 0 5.9 -1 8.2 -2.9 c -1.4 0 -2.7 -0.4 -3.8 -1.3 c -1.2 -1 -1.9 -2 -2.2 -3.3 c 0.4 0.1 1 0.1 1.2 0.1 c 0.6 0 1.2 -0.1 1.7 -0.2 c -1.4 -0.3 -2.7 -1.1 -3.7 -2.3 s -1.4 -2.6 -1.4 -4.2 v -0.1 c 1 0.6 2 0.9 3 0.9 c -1 -0.6 -1.5 -1.3 -2.2 -2.4 c -0.6 -1 -0.9 -2.1 -0.9 -3.3 s 0.3 -2.3 1 -3.4 c 1.5 2.1 3.6 3.6 6 4.9 s 4.9 2 7.6 2.1 c -0.1 -0.6 -0.1 -1.1 -0.1 -1.4 c 0 -1.8 0.8 -3.5 2 -4.7 c 1.2 -1.2 2.9 -2 4.7 -2 c 2 0 3.6 0.8 4.8 2.1 c 1.4 -0.3 2.9 -0.9 4.2 -1.5 c -0.4 1.5 -1.4 2.7 -2.9 3.6 C 33.8 11.2 35.1 10.9 36.3 10.2 L 36.3 10.2 Z"); */
-    height: 1em;
-    width: 1em;
-    border: 1px solid white;
-    fill: white;
-    color: white;
-    
-    clip-path: polygon(1% 81%, 7% 81%, 12% 81%, 17% 80%, 22% 78%, 27% 76%, 30% 73%, 25% 72%, 21% 70%, 18% 68%, 15% 65%, 13% 62%, 11% 59%, 16% 59%, 20% 58%, 18% 57%, 14% 55%, 10% 53%, 7% 49%, 5% 44%, 4% 40%, 4% 39%, 8% 40%, 11% 40%, 13% 40%, 11% 38%, 8% 35%, 6% 30%, 4% 25%, 5% 19%, 6% 16%, 7% 14%, 10% 17%, 14% 20%, 18% 23%, 22% 26%, 26% 29%, 31% 31%, 35% 32%, 41% 34%, 45% 35%, 49% 35%, 49% 33%, 49% 30%, 49% 27%, 50% 24%, 51% 21%, 53% 17%, 56% 15%, 59% 13%, 64% 11%, 67% 10%, 71% 10%, 75% 11%, 79% 12%, 82% 14%, 84% 16%, 89% 15%, 93% 13%, 97% 11%, 97% 13%, 96% 16%, 94% 17%, 93% 19%, 90% 21%, 88% 23%, 100% 19%, 97% 24%, 93% 28%, 90% 29%, 90% 37%, 89% 44%, 88% 48%, 87% 52%, 85% 55%, 84% 58%, 82% 61%, 80% 65%, 78% 68%, 76% 71%, 73% 74%, 69% 77%, 66% 80%, 61% 83%, 56% 86%, 51% 88%, 45% 89%, 39% 90%, 35% 90%, 29% 90%, 25% 90%, 20% 89%, 16% 88%, 11% 87%, 7% 85%, 1% 81%);
-    background-color: var(--blue-white);
-}
+    .contact-link svg {
+        height: 1.25em;
+        width: 1.25em;
+        fill: white;
+    }
+
+    .contact-link p {
+        padding-left: .5em;
+    }
