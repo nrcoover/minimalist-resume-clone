@@ -16,10 +16,6 @@
 }
 
 /* ---------- HTML, BODY ELEMENTS ---------- */
-html > svg {
-    display: none;
-}
-
 html, body {
     height: 100vh;
     width: 100%;
@@ -34,19 +30,19 @@ body {
     margin: 0 auto;
     min-width: 320px;
     
-    max-width: 325px;
+    /* max-width: 325px; */
     /* min-height: 1025px; */
     /* font-weight: 400; */
 }
 
 main {
-    align-items: center;
+    /* align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    overflow: hidden;
-    padding: 1em;
+    justify-content: center; */
+    /* min-height: 100vh; */
+    /* overflow: hidden; */
+    padding: .82em;
     width: 100%;
     
 }
@@ -77,18 +73,18 @@ h2 {
 
 h3 {
     color: rgba(255, 255, 255, 1);
-    font-size: 1.05em;
+    font-size: 1.25em;
     margin-bottom: 1.25em;
 }
 
 a, a::before, a::after {
     color: rgba(255, 255, 255, .9);
     text-decoration: underline;
+    transition: color .25s ease;  
 }
 
 a:hover {
     color: rgb(50, 231, 237);
-    transition: color 0.25s ease;  
 }
 
 hr {
@@ -101,7 +97,7 @@ hr {
 }
 
 .section-wrapper {
-    padding: 2em 1.25em;
+    padding: 2em 1.5em;
     font-size: .815em;
 }
 
@@ -112,7 +108,7 @@ hr {
 /* ---------- TITLE CTR DECLERATIONS ---------- */
 #title-ctr {
     align-items: center;
-    background-color: var(--blue-white);
+    background-color: rgba(255, 255, 255, 1);
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
     color: black;
@@ -128,7 +124,7 @@ hr {
 
 #title-ctr img {
     border-radius: 100%;
-    width: 8em;
+    width: 7em;
 }
 
 /* ---------- ABOUT CTR DECLERATIONS ---------- */
@@ -145,6 +141,10 @@ hr {
 #work-ctr {
     background-color: var(--blue-dark);
     width: 100%;
+}
+
+#work-ctr #work-wrapper {
+    padding-bottom: 1.25em;
 }
 
 #work-ctr li {
@@ -166,8 +166,20 @@ hr {
     width: 1.25em;
 }
 
+#work-ctr p {
+    display: inline-block;
+    line-height: 1.65em;
+    padding-bottom: .65em;
+    padding-top: .25em;
+}
+
 #work-ctr hr {
     margin-bottom: 1em;
+}
+
+#work-ctr .list-item {
+    display: flex;
+    flex-direction: row;
 }
 
 /* ---------- CONTACT CTR DECLERATIONS ---------- */
@@ -192,20 +204,28 @@ hr {
     flex-wrap: wrap;
 }
 
+#contact-link-wrap .contact-link:hover {
+    border: 1px solid rgb(50, 231, 237);
+    fill: rgb(50, 231, 237);
+}
+
 #contact-link-wrap .contact-link {
     border: 1px solid rgba(255, 255, 255, .2);
     border-radius: .25em;
+    fill: white;
     display: flex;
     margin-bottom: .25em;
     margin-right: .25em;
     padding: .5em 1em;
+    transition: fill 0.25s ease, border 0.25s ease; 
 }
 
     .contact-link svg {
         height: 1.25em;
         width: 1.25em;
-        fill: white;
+        fill: inherit;
     }
+
 
     .contact-link p {
         padding-left: .5em;
