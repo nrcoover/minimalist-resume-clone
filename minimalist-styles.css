@@ -29,21 +29,31 @@ body {
     line-height: 1.25;
     margin: 0 auto;
     min-width: 320px;
-    
-    /* max-width: 325px; */
-    /* min-height: 1025px; */
-    /* font-weight: 400; */
+
+    /* height: 100vh;
+    min-height: 100vh;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* min-height: 100vh;
+    position: relative;
+    height: 100vh; */
 }
 
 main {
-    /* align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    /* min-height: 100vh; */
-    /* overflow: hidden; */
     padding: 1.25em;
-    width: 100%;   
+    width: 100%; 
+    
+    
+    /* position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); */
 }
 
 section {
@@ -231,7 +241,6 @@ hr {
     }
 
 /* ---------- MEDIA QUERIES ---------- */
-
 /* Extra small devices (phones) */
 @media only screen and (min-width: 481px) {
     body {
@@ -301,11 +310,6 @@ hr {
         border-bottom: none;
         border-right: 1px solid var(--blue-white);
         opacity: .3;
-        /* margin-right: 2em; */
-        /* border: 3px solid pink; */
-        /* margin-bottom: 1.25em; */
-        /* display: block; */
-        /* width: 100%; */
     }
 
     .section-wrapper {
@@ -317,10 +321,6 @@ hr {
     .section-wrapper p {
         font-size: .85em;
     }
-    
-    /* .section-wrapper > * {
-        display: inline-block;
-    } */
 
     .section-wrapper > :nth-child(1) {
         width: 30%;
@@ -332,7 +332,6 @@ hr {
 
     .section-wrapper > :nth-child(3) {
         width: 70%;
-
     }
 
     /* ----- TITLE CTR MEDIA @ 737 ----- */
@@ -363,7 +362,7 @@ hr {
 }
 
 /* Medium devices (landscape tablets)*/
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 981px) {
     body {
         max-width: 40em;
     }
@@ -393,7 +392,7 @@ hr {
         font-size: 1.05em;
     }
 
-    /* ----- TITLE CTR MEDIA @ 737 ----- */
+    /* ----- TITLE CTR MEDIA @ 981 ----- */
     #title-ctr {
         padding: 3.35em;
     }
@@ -406,8 +405,20 @@ hr {
         width: 7.25em;
     }
 
+    /* ----- WORK CTR MEDIA @ 1681 ----- */
     #work-ctr #work-wrapper {
         padding-bottom: 2.35em;
+    }
+    
+    #work-ctr li {
+        line-height: .85em;
+        padding: .45em 0;
+    }
+    
+    #work-ctr li::before {
+        height: 1.5em;
+        margin-right: .65em;
+        width: 1.5em;
     }
 }
 
