@@ -42,9 +42,8 @@ main {
     justify-content: center; */
     /* min-height: 100vh; */
     /* overflow: hidden; */
-    padding: .82em;
-    width: 100%;
-    
+    padding: 1.25em;
+    width: 100%;   
 }
 
 section {
@@ -97,7 +96,7 @@ hr {
 }
 
 .section-wrapper {
-    padding: 2em 1.5em;
+    padding: 2.75em 2em;
     font-size: .815em;
 }
 
@@ -112,7 +111,7 @@ hr {
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
     color: black;
-    padding: 2em;
+    padding: 2.5em;
     position: relative;
     width: 100%;
 }
@@ -158,7 +157,7 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 55%;
-    border: 1px solid rgba(255, 255, 255, .2);;
+    border: 1px solid rgba(255, 255, 255, .2);
     border-radius: 100%;
     display: inline-block;
     height: 1.25em;
@@ -174,7 +173,7 @@ hr {
 }
 
 #work-ctr hr {
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
 }
 
 #work-ctr .list-item {
@@ -211,22 +210,275 @@ hr {
 
 #contact-link-wrap .contact-link {
     border: 1px solid rgba(255, 255, 255, .2);
-    border-radius: .25em;
+    border-radius: .35em;
     fill: white;
     display: flex;
-    margin-bottom: .25em;
-    margin-right: .25em;
-    padding: .5em 1em;
+    margin-bottom: .6em;
+    margin-right: .6em;
+    padding: .55em 1.05em;
     transition: fill 0.25s ease, border 0.25s ease; 
 }
 
     .contact-link svg {
-        height: 1.25em;
-        width: 1.25em;
         fill: inherit;
+        height: 1.25em;
+        transform: translateY(.1em);
+        width: 1.25em;
     }
-
 
     .contact-link p {
         padding-left: .5em;
     }
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 481px) {
+    body {
+        max-width: 33em;
+    }
+    
+    main {
+        padding: 2em;  
+    }
+
+    hr {
+        border-bottom: 2px solid var(--blue-white);
+        margin-bottom: 1.25em;
+    }
+    
+    h3 {
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.2em;
+        margin-bottom: 1.25em;
+    }
+
+    .section-wrapper {
+        padding: 2.5em 2em;
+        font-size: .85em;
+    }
+
+    /* ----- TITLE CTR MEDIA @ 480 ----- */
+    #title-ctr {
+        padding: 2.5em;
+    }
+
+    #title-ctr > * {
+        padding: .35em;
+    }
+
+    /* ----- WORK CTR MEDIA @ 480 ----- */
+    #work-ctr #work-wrapper {
+        padding-bottom: 1.5em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones) */
+@media only screen and (min-width: 737px) {
+    body {
+        max-width: 35em;
+    }
+    
+    main {
+        padding: 3.15em; 
+    }
+
+    h1 {
+        font-size: 1.65em;
+    }
+
+    h2 {
+        font-size: .85em;
+    }
+
+    h3 {
+        font-size: 1em;
+        text-align: right;
+    }
+
+    hr {
+        margin: 0 2.5em;
+        border-bottom: none;
+        border-right: 1px solid var(--blue-white);
+        opacity: .3;
+        /* margin-right: 2em; */
+        /* border: 3px solid pink; */
+        /* margin-bottom: 1.25em; */
+        /* display: block; */
+        /* width: 100%; */
+    }
+
+    .section-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .section-wrapper p {
+        font-size: .85em;
+    }
+    
+    /* .section-wrapper > * {
+        display: inline-block;
+    } */
+
+    .section-wrapper > :nth-child(1) {
+        width: 30%;
+    }
+
+    .section-wrapper > :nth-child(2) {
+        width: 0%;
+    }
+
+    .section-wrapper > :nth-child(3) {
+        width: 70%;
+
+    }
+
+    /* ----- TITLE CTR MEDIA @ 737 ----- */
+    #title-ctr {
+        padding: 3em;
+    }
+    
+    #title-ctr > * {
+        padding: .25em;
+        white-space: nowrap;
+    }
+
+    #title-ctr img {
+        border-radius: 100%;
+        margin-bottom: .5em;
+        width: 6em;
+    }
+
+    /* ----- WORK CTR MEDIA @ 737 ----- */
+    #work-ctr hr {
+        margin-bottom: 1em;
+    }
+
+    /* ----- CONTACT CTR MEDIA @ 737 ----- */
+    #contact-ctr hr {
+        margin-bottom: .25em;
+    }
+}
+
+/* Medium devices (landscape tablets)*/
+@media only screen and (min-width: 980px) {
+    body {
+        max-width: 40em;
+    }
+    
+    main {
+        padding: 4em; 
+    }
+
+    h1 {
+        font-size: 1.85em;
+    }
+
+    h2 {
+        font-size: .95em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+        text-align: right;
+    }
+
+    .section-wrapper {
+        padding: 3.5em 2em;
+    }
+
+    .section-wrapper p {
+        font-size: 1.05em;
+    }
+
+    /* ----- TITLE CTR MEDIA @ 737 ----- */
+    #title-ctr {
+        padding: 3.35em;
+    }
+    
+    #title-ctr > * {
+        padding: .3em;
+    }
+
+    #title-ctr img {
+        width: 7.25em;
+    }
+
+    #work-ctr #work-wrapper {
+        padding-bottom: 2.35em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops) */
+@media only screen and (min-width: 1681px) {
+    body {
+        max-width: 60em;
+    }
+    
+    main {
+        padding: 5.85em; 
+    }
+
+    h1 {
+        font-size: 2.55em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        text-align: right;
+    }
+
+    .section-wrapper {
+        padding: 5em 6em;
+    }
+
+    .section-wrapper p {
+        font-size: 1.35em;
+    }
+
+    /* ----- TITLE CTR MEDIA @ 1681 ----- */
+    #title-ctr {
+        padding: 4.5em;
+    }
+    
+    #title-ctr > * {
+        padding: .35em;
+    }
+
+    #title-ctr img {
+        width: 10em;
+    }
+
+    /* ----- WORK CTR MEDIA @ 1681 ----- */
+    #work-ctr #work-wrapper {
+        padding-bottom: 3.5em;
+    } 
+    
+    #work-ctr li {
+        line-height: 3.85em;
+    }
+    
+    #work-ctr li::before {
+        height: 1.75em;
+        margin-right: .85em;
+        width: 1.75em;
+    }
+
+    /* ----- CONTACT CTR MEDIA @ 1681 ----- */
+    .contact-link svg {
+        height: 1.5em;
+        transform: translateY(.35em);
+        width: 1.5em;
+    }
+    
+    .contact-link p {
+        padding: .25em .4em; 
+        padding-left: .3em;
+    }
+}
